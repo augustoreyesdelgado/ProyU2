@@ -1,0 +1,20 @@
+<!--
+Archivo:  pie.jspf
+Objetivo: sección reutilizable de los ejemplos responsivos.
+		  Contiene aviso legal y licencias de imágenes, aparece en la parte inferior.
+Autor: BAOZ
+-->
+			<footer id="main-footer">
+				<h5>Aviso Legal</h5>
+				Las im&aacute;genes de los productos son propiedad de su titular (https://www.ecopromocionales.com.mx) 
+				y se muestran 
+				&uacute;nicamente con prop&oacute;sitos acad&eacute;micos. <br>
+				 
+				<a href="https://www.flaticon.com/" title="icons">El logo y las im&aacute;genes</a> son de Freepik - Flaticon.
+				<address>
+					Responsable del ejercicio: BAOZ. Instituto Tecnol&oacute;gico de Orizaba.
+				</address>
+			</footer>
+		</div>
+	</body>
+</html>

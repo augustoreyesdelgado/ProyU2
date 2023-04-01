@@ -1,0 +1,148 @@
+/*
+Hoja de estilo responsivo
+Autor: BAOZ
+*/
+
+a:link{color:DeepSkyBlue;}
+a:visited{color:PowderBlue; font-weight: lighter;}
+a:hover{color:DarkCyan; font-weight: bold;}
+a.menu{
+	display: inline-block;
+	padding: 0.5em;
+}
+
+body{
+	font-family: Verdana, Helvetica, Arial, "Times New Roman";
+	color: MidnightBlue;
+}
+img, video, canvas {
+  max-width: 100%;
+}
+header{
+	font-weight:bold;
+	text-align: left;
+}
+main {
+	border-radius: 1rem;
+	border: 0.2rem solid Navy;
+	text-transform: none;
+}
+section{
+	text-align: justify;
+}
+table{
+	border-collapse: collapse; /*no aparezcan los bordes*/
+	width: 100%;
+}
+td, th {
+  border: 0.02em solid #5CA5C2;
+  padding: 0.5em;
+}
+th {
+  text-align: center;
+  background-color: #AEE150;
+}
+tr:nth-child(even){/*el color del fondo de renglones impares*/
+	background-color: AliceBlue;
+} 
+#titPral{
+	display: inline; 
+	vertical-align:90%;
+}
+
+/*Definir áreas para grid*/
+#main-header {
+	grid-area: header;
+	border-radius: 1rem;
+	border: 0.2rem solid Navy;
+	padding: 0.2em;
+	height: 5.5em;
+	color: hsl(210, 90%, 16%);
+	font-size: large;
+	background-color: rgba(255, 255, 255, .5);/*Blanco con transparencia*/
+	text-transform: capitalize;
+	text-shadow: 0.3em 0.3em 0.6em Teal; /*sombra horizontal y sombra vertical*/
+}
+#main-nav {
+	grid-area: nav;
+	display: block;
+	padding: 0.3em;
+	border-radius: 1rem;
+	border: 0.2rem solid Navy;
+}
+#main-content {
+	grid-area: content;
+	padding: 0.5em;
+}
+#main-aside {
+	grid-area: sidebar;
+	padding: 0.5em;
+	border-radius: 1rem;
+	border: 0.2rem solid Navy;
+}
+#main-advertisement {
+	grid-area: advertisement;
+	padding: 0.5em;
+	border-radius: 1rem;
+	border: 0.2rem solid Navy;
+}
+#main-footer {
+	grid-area: footer;
+	font-size: 75%;
+	padding: 0.625em 0.9em 1.4em;
+	background-color:AliceBlue;
+	text-align: center;
+}
+
+/*Definir contenido del grid (y como no se indica otra cosa, será una columna)*/
+#main-layout {
+	display: grid;
+	grid-gap: 0.2em;
+	grid-template-areas:
+		"header"
+		"nav"
+		"content"
+		"sidebar"
+		"advertisement"
+		"footer";
+}
+
+/*Alterar distribución para dispositivos "medianos", dos columnas (3/4 y 1/4)*/
+@media (min-width: 500px) {
+	#main-layout {
+		grid-template-columns: 3fr 1fr;
+		grid-template-areas:
+			  "header header"
+			  "nav nav"
+			  "content sidebar"
+			  "footer advertisement";
+	}
+	nav a.menu {
+		display:inline-block;
+		justify-content: space-between;
+	}
+}
+
+/*Alterar distribución para dispositivos mayores (3 columnas: 1/6, 4/6, 1/6)*/
+@media (min-width: 700px) {
+	#main-layout {
+		grid-template-columns: 1fr 4fr 1fr;
+		grid-template-areas:
+			"header header  header"
+			"nav content sidebar"
+			"nav content advertisement"
+			"footer footer footer"
+	}
+	nav a.menu {
+		display:inline-block;
+		width:100%;
+	}
+	#main-content{
+		min-height: 18rem;
+		
+	}
+	section h3{
+		column-span: all;
+		text-align: center;
+	}
+}

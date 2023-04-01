@@ -1,0 +1,14 @@
+<!--
+Archivo:  lateral.jspf
+Objetivo: sección reutilizable de los ejemplos responsivos.
+		  Aparece en el lado izquierdo.
+Autor: BAOZ
+-->
+			<aside id="main-aside">
+				<h3>Nuestras Redes</h3>
+                        <ul>
+                            <li><a>Facebook</a></li>
+                            <li><a>Instagram</a></li>
+                            <li><a>Twitter</a></li>
+                        <ul>
+			</aside>

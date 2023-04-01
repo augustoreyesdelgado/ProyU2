@@ -1,0 +1,16 @@
+<!--
+Archivo:  menu.jspf
+Objetivo: sección reutilizable de los ejemplos responsivos.
+		  Contiene las ligas para navegar en la aplicación.
+Autor: BAOZ
+-->
+    <nav id="main-nav">
+        <a href="${pageContext.request.contextPath}/" class="menu">Inicio</a>
+        <a href="${pageContext.request.contextPath}/login" 
+           class="menu">Entrar</a>
+        
+        <a href="${pageContext.request.contextPath}/editaprod1" class="menu">Registro</a>
+        <a href="${pageContext.request.contextPath}/acercade" class="menu">Acerca de</a>
+        <a href="${pageContext.request.contextPath}/menusc" class="menu">Men&uacute;s</a>
+        <a href="${pageContext.request.contextPath}/temasc" class="menu">Temas</a>
+    </nav>

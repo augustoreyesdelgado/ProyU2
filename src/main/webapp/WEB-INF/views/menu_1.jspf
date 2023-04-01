@@ -1,0 +1,15 @@
+<!--
+Archivo:  menu.jspf
+Objetivo: sección reutilizable de los ejemplos responsivos.
+		  Contiene las ligas para navegar en la aplicación.
+Autor: BAOZ
+-->
+    <nav id="main-nav">
+        <a href="${pageContext.request.contextPath}/" class="menu">Inicio</a>
+        <a href="${pageContext.request.contextPath}/banquete?txtNom=banquete" 
+           class="menu">Contratar Banquete</a>
+        <a href="resultado.jsp" class="menu">Banquetes Registrados</a>
+        <a href="CtrlCerrar.jsp" class="menu">Cerrar Sesi&oacute;n</a>
+        <a href="acercadealt.jsp" class="menu">Acerca de</a>
+        
+    </nav>
